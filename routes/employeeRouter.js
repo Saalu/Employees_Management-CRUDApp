@@ -4,8 +4,10 @@ const auth = require('../middleware/auth')
 
 
 
+router.get('/limited', auth, employeeCtrl.getLimited)
 router.route('/')
     .get(auth, employeeCtrl.getAll)
+    // .get(auth, employeeCtrl.getLimited)
     .post(auth, employeeCtrl.create)
 
 
