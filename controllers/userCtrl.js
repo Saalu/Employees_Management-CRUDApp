@@ -49,7 +49,7 @@ const userCtrl = {
         }
 
     },
-    verified: async(req,res,next) =>{
+    verifiedToken: async(req,res,next) =>{
         try {
             const token = req.cookies.token
             if(!token) return res.status(400).json({msg:'No token provided'})
@@ -58,6 +58,7 @@ const userCtrl = {
                 if(err) return res.status(400).json({msg:'Invalid token'})
 
                 req.user = verifiedUser;
+                // res.json({status:true, user:req.user.name})
                 next()
             })
         

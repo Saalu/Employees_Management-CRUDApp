@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 
-const noteSchema = new mongoose.Schema({
-    employee_id:{
+const employeeSchema = new mongoose.Schema({
+    employeeID:{
         type:Number,
         required: true
     },
@@ -17,27 +17,27 @@ const noteSchema = new mongoose.Schema({
         type:String,
         required: true
     },
-    location:{
-        type:String,
-        required: true
-    },
+    
     salary:{
         type:Number,
         required: true
     },
-   
-    start_date:{
-        type:Date,
-        default: Date.now
-    },
-    user_id:{
+    location:{
         type:String,
         required: true
     },
-    name:{
+    startDate:{
+        type:Date,
+        default: Date.now
+    },
+    createdBy_id:{
+        type:String,
+        required: true
+    },
+    createdBy:{
         type:String,
         required: true
     },
 },{timestamp:true})
 
-module.exports = mongoose.model('note', noteSchema)
+module.exports = mongoose.model('employee', employeeSchema)
