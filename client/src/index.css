@@ -1,13 +1,218 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+:root{
+    --green: #27ae60;
+    --blue: #275fae;
+    --dark-green:#219150;
+    --black:#444;
+    --light:#666;
+    --border:.1rem solid rgba(0,0,0,0.1);
+    --border-hover:.1rem solid var(--black);
+    --box-shadow: 0 .5rem 1rem rgba(0,0,0,.1)
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+*{
+    font-family: "Poppins", sans-serif;
+    margin: 0;padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+    transition: width none;
 }
+
+html{
+  font-size: 62.5%;
+  color: var(--black);
+}
+
+.btn{
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 0.9rem 3rem;
+  border-radius: .5rem;
+  color: #fff;
+  background: var(--green);
+  font-size: 1.7rem;
+  cursor: pointer;
+  font-weight: 500;
+  /* width: 50%; */
+}
+.btn:hover{
+  background: var(--dark-green);
+}
+
+.navigation{
+  font-size: 1.6rem;
+  padding: 1.5rem 9%;
+  background-color: #fff;
+  height: 58px;
+  width: 100%;
+  box-shadow:var(--box-shadow);
+  border: var(--border);
+  
+}
+
+.navigation ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+.navigation ul li {
+  display: inline-block;
+  margin-left: 1.5rem;
+  height: 100%;
+}
+/* .navigation ul li:hover {
+  background: var(--light);
+} */
+
+
+
+.home-page{
+  height: 100vh;
+  background: var(--blue);
+}
+
+
+/* ==========================Login Form================= */
+.login-form-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255,255,255,.9);
+  /* position: fixed;
+  top: 0;left: -105%; */
+  height: 100%;
+  width: 100%;
+}
+
+
+.login-form-container form{
+  background: #fff;
+  border: var(--border);
+  width: 40rem;
+  padding: 2rem;
+  margin: 6rem;
+  border-radius: .5rem;
+  box-shadow: var(--box-shadow);
+}
+
+.login-form-container form h3{
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  color:var(--black);
+  text-align: center;
+}
+.login-form-container form span{
+  font-size: 1.5rem;
+  padding-top: 1rem;
+  display: block;
+  text-align: left;
+}
+
+.login-form-container form input{
+  width: 100%;
+  font-size: 1.6rem;
+  padding: 1rem 1.2rem;
+  margin: .7rem 0;
+  border: var(--border);
+  border-radius: .5rem;
+  text-transform: none;
+}
+
+
+
+.login-form-container form .btn{
+  text-align: center;
+  width: 100%;
+  margin: 1.5rem 0 ;
+  border:none;
+}
+
+
+
+.login-form-container form p{
+  padding-top: 0.8rem;
+  color: var(--light);
+  font-size: 1.5rem;
+  text-align: left;
+
+}
+
+.login-form-container form p a{
+  color: var(--green);
+  text-decoration: underline;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer{
+  text-align: center;
+  background: var(--green);
+  position: fixed;
+  bottom: 0;left: 0;right: 0;
+  z-index: 1000;
+
+ 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===============Responsive ================= */
+
+@media (max-width:768px) {
+ 
+  
+}
+@media (max-width:450px) {
+  html{
+      font-size: 50%;
+
+  }
+}
+@media (max-width:991px) {
+  html{
+      font-size: 55%;
+
+  }
+
+}
+
